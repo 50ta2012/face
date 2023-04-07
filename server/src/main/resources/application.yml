@@ -1,0 +1,11 @@
+spring:
+  output.ansi.enabled: ALWAYS
+
+  jpa.hibernate.ddl-auto: update
+
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:127.0.0.1}:${MYSQL_PORT:3314}/facedb
+    username: faceuser
+    password: SlsAR9SYz8OKuhAcbmGz
+
+  jpa.open-in-view: false

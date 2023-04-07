@@ -1,0 +1,6 @@
+CREATE DATABASE facedb;
+CREATE USER 'faceuser'@'%' IDENTIFIED BY 'SlsAR9SYz8OKuhAcbmGz';
+GRANT ALL ON facedb.* TO 'faceuser'@'%';
+
+CREATE USER 'dump'@'%' IDENTIFIED BY 'waPOq7PVIkPXQhyEPSHO';
+GRANT SELECT, PROCESS, LOCK TABLES ON *.* TO 'dump'@'%';
