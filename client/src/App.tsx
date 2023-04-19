@@ -3,16 +3,24 @@ import "./App.css";
 import Login from "./web/auth/Login";
 import Main from "./web/Main";
 import Menu from "./web/Menu";
+import { ThemeProvider, CssBaseline } from "@mui/material";
+import theme from "./assets/GlobalStyle";
+import SideBarPage from "./model/SideBarPage";
 
 function App() {
 	return (
 		<div className="App">
+			
+			<ThemeProvider theme={theme}>
+		 	<CssBaseline />
 			<Router>
 				<Routes>
 					<Route path="/login" element={<Login />} />
 					<Route path="*" element={<Home />} />
 				</Routes>
 			</Router>
+			</ThemeProvider>
+			
 		</div>
 	);
 }
@@ -20,8 +28,13 @@ function App() {
 function Home() {
 	return (
 		<>
-			<Menu />
-			<Main />
+		
+		 	<SideBarPage />
+			{/* <Menu /> */}
+			{/* <Main /> */}
+
+		
+		
 		</>
 	);
 }
